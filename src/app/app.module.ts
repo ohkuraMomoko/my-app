@@ -9,13 +9,14 @@ import { InfoComponent } from './components/info/info.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
 import { DatasourceService } from './services/datasource.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,8 @@ import { DatasourceService } from './services/datasource.service';
     MatTableModule,
     MatSortModule,
     HttpClientModule,
+    MatPaginatorModule,
+    FormsModule
   ],
   providers: [DatasourceService],
   bootstrap: [AppComponent]

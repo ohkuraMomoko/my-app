@@ -1,3 +1,5 @@
+/* vendor style ======================*/
+/* angular material: table component */
 table {
   width: 100%;
 }
@@ -5,3 +7,27 @@ table {
 th.mat-sort-header-sorted {
   color: black;
 }
+
+/* vendor style ======================*/
+/* customize style ======================*/
+.page-containter {
+  padding-top: 60px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.select-containter {
+  margin-bottom: 2rem;
+
+}
+.form-buttom {
+  width: 100px;
+  line-height: 50px;
+  background-color: #fff;
+  display: block;
+  margin: 0 0 50px;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex{
+  background-color: #fff;
+}
+/* customize style ======================*/
