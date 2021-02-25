@@ -1,0 +1,36 @@
+$menuColor: rgb(130, 223, 130);
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 50%;
+  height: 50px;
+  // background-image: url('images/logo.png');
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  &-item {
+    display: block;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 0 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color linear 0.3s;
+    &:hover,
+    .active {
+      color: $menuColor;
+    }
+  }
+}

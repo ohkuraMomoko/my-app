@@ -1,0 +1,56 @@
+<h4>Basic mat-select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let dataType of dataTypes" [value]="dataType.value">
+      {{dataType.showVal}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<button mat-button color="primary">Primary</button>
+
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="fromHostName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> fromHostName </th>
+    <td mat-cell *matCellDef="let element"> {{element.fromHostName}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="fromIP">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> fromIP </th>
+    <td mat-cell *matCellDef="let element"> {{element.fromIP}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="toHostName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> toHostName </th>
+    <td mat-cell *matCellDef="let element"> {{element.toHostName}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="toIP">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> toIP </th>
+    <td mat-cell *matCellDef="let element"> {{element.toIP}} </td>
+  </ng-container>
+  <ng-container matColumnDef="use">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> use </th>
+    <td mat-cell *matCellDef="let element"> {{element.use}} </td>
+  </ng-container>
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> status </th>
+    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+  </ng-container>
+  <ng-container matColumnDef="requestId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> requestId </th>
+    <td mat-cell *matCellDef="let element"> {{element.requestId}} </td>
+  </ng-container>
+  <ng-container matColumnDef="ports">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> ports </th>
+    <td mat-cell *matCellDef="let element"> {{element.ports}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

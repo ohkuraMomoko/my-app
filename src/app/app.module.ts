@@ -3,16 +3,39 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { InfoComponent } from './components/info/info.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HomeComponent } from './components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { HttpClientModule } from '@angular/common/http';
+import { DatasourceService } from './services/datasource.service';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    ShopComponent,
+    InfoComponent,
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatTableModule,
+    MatSortModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [DatasourceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
